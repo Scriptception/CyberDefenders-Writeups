@@ -72,9 +72,21 @@ Still in VirusTotal, under the details tab, we get more information, including t
 
 ### 6 - Which LOLBin is leveraged for stealthy process execution in this script? Provide the full path.
 
-You might've noticed the line in `mdm.jpg`: `$AC = $NA + 'osof#####t.NET\Fra###mework\v4.0.303###19\R##egSvc#####s.exe'-replace  '#', ''`
+LOLBins (Living off the Land Binaries) are legitimate Windows executables that are abused to run malicious code, bypassing measures such as app whitelisting.
 
-Which cleaned-up, becomes: `C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegSvcs.exe`
+So we scan `mdm.jpg` for calls to such binaries, and we find
+
+```
+$AC = $NA + 'osof#####t.NET\Fra###mework\v4.0.303###19\R##egSvc#####s.exe'-replace  '#', ''
+```
+
+RegSvcs.exe is normally used to register .NET assemblies, but can be abused to load arbitrary assemblies without touching obvious execution paths.
+
+Cleaning this up, we get:
+
+```
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegSvcs.exe
+```
 
 
 ### 7 - The script is designed to drop several files. List the names of the files dropped by the script.
