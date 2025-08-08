@@ -80,13 +80,13 @@ So we scan `mdm.jpg` for calls to such binaries, and we find
 $AC = $NA + 'osof#####t.NET\Fra###mework\v4.0.303###19\R##egSvc#####s.exe'-replace  '#', ''
 ```
 
-RegSvcs.exe is normally used to register .NET assemblies, but can be abused to load arbitrary assemblies without touching obvious execution paths.
-
 Cleaning this up, we get:
 
 ```
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegSvcs.exe
 ```
+
+RegSvcs.exe is normally used to register .NET assemblies, but can be abused to load arbitrary assemblies without touching obvious execution paths.
 
 
 ### 7 - The script is designed to drop several files. List the names of the files dropped by the script.
