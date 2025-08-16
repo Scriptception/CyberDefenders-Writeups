@@ -32,7 +32,7 @@ We see a B64 encoding `targets` array: `d3d3LmZhY2Vib29rLmNvbQ==`.
 
 This var is used in the next line, to match against the site visited in the browser.
 
-[Decoding this](https://www.cyberchef.io), we get `www.facebook.com`
+Decoding this: `echo -n "d3d3LmZhY2Vib29rLmNvbQ==" | base64 -d`, we get `www.facebook.com`
 
 
 ### 3. Which type of HTML element is utilized by the extension to send stolen data?
