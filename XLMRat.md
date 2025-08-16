@@ -1,12 +1,12 @@
 # XLMRat
 
-## Description
+## Scenario
 
 A compromised machine has been flagged due to suspicious network traffic. Your task is to analyze the PCAP file to determine the attack method, identify any malicious payloads, and trace the timeline of events. Focus on how the attacker gained access, what tools or techniques were used, and how the malware operated post-compromise.
 
 ## Questions
 
-### 1 - The attacker successfully executed a command to download the first stage of the malware. What is the URL from which the first malware stage was installed?
+### 1. The attacker successfully executed a command to download the first stage of the malware. What is the URL from which the first malware stage was installed?
 
 Run Tshark against the pcap to filter for HTTP requests:
 
@@ -23,7 +23,7 @@ We see the full request URI for the second call giving us the answer to question
 `[Full request URI: http://45.126.209.4:222/mdm.jpg]`
 
 
-### 2 - Which hosting provider owns the associated IP address?
+### 2. Which hosting provider owns the associated IP address?
 
 We can use the `whois` command to quickly get this information.
 
@@ -39,7 +39,7 @@ country:        US
 descr:          2115 NW 22nd St
 ```
 
-### 3 - By analyzing the malicious scripts, two payloads were identified: a loader and a secondary executable. What is the SHA256 of the malware executable?
+### 3. By analyzing the malicious scripts, two payloads were identified: a loader and a secondary executable. What is the SHA256 of the malware executable?
 
 We can use tshark to capture a copy of the files from the HTTP requests in the PCAP: `tshark -r capture.pcap --export-objects "http,./http_files"`
 
@@ -60,17 +60,17 @@ output.bin: PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows
 1eb7b02e18f67420f42b1d94e74f3b6289d92672a0fb1786c30c03d68e81d798  output.bin
 ```
 
-### 4 - What is the malware family label based on Alibaba?
+### 4. What is the malware family label based on Alibaba?
 
 Now that we have the hash, we can search it in VirusTotal
 
 We can see that it's of the family `asyncrat`
 
-### 5 - What is the timestamp of the malware's creation?
+### 5. What is the timestamp of the malware's creation?
 
 Still in VirusTotal, under the details tab, we get more information, including the creation time: `2023-10-30 15:08`
 
-### 6 - Which LOLBin is leveraged for stealthy process execution in this script? Provide the full path.
+### 6. Which LOLBin is leveraged for stealthy process execution in this script? Provide the full path.
 
 LOLBins (Living off the Land Binaries) are legitimate Windows executables that are abused to run malicious code, bypassing measures such as app whitelisting.
 
@@ -89,7 +89,7 @@ C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegSvcs.exe
 RegSvcs.exe is normally used to register .NET assemblies, but can be abused to load arbitrary assemblies without touching obvious execution paths.
 
 
-### 7 - The script is designed to drop several files. List the names of the files dropped by the script.
+### 7. The script is designed to drop several files. List the names of the files dropped by the script.
 
 Again in the `mdm.jpg` file, we can see write actions:
 
