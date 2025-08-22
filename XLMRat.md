@@ -1,8 +1,34 @@
+---
+Type: CTF
+tags:
+ - Type/Atom
+ - status/done
+ - ctf/platform/CyberDefenders
+ - ctf/difficulty/Easy
+ - ctf/category/Network_Forensics
+created: 2025-08-22T21:44
+Status: Done
+Platform: CyberDefenders
+Category: Network Forensics
+Tactics: [Execution, Defense Evasion]
+Tools: [TShark]
+---
+
+# XLMRat
+
+## Overview
+
+{{VALUE:CTF Scenario}}
+
+## Questions / Walkthrough
+
 # XLMRat
 
 ## Scenario
 
 A compromised machine has been flagged due to suspicious network traffic. Your task is to analyze the PCAP file to determine the attack method, identify any malicious payloads, and trace the timeline of events. Focus on how the attacker gained access, what tools or techniques were used, and how the malware operated post-compromise.
+
+---
 
 ## Questions
 
@@ -99,3 +125,7 @@ Again in the `mdm.jpg` file, we can see write actions:
 [IO.File]::WriteAllText("C:\Users\Public\Conted.bat", $Content)
 [IO.File]::WriteAllText("C:\Users\Public\Conted.vbs", $Content)
 ```
+
+## References
+
+- [CTF Link](https://cyberdefenders.org/blueteam-ctf-challenges/xlmrat/)

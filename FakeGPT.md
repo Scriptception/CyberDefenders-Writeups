@@ -1,3 +1,19 @@
+---
+Type: CTF
+tags:
+ - Type/Atom
+ - status/done
+ - ctf/platform/CyberDefenders
+ - ctf/difficulty/Easy
+ - ctf/category/Malware_Analysis
+created: 2025-08-22T21:40
+Status: Done
+Platform: CyberDefenders
+Category: Malware Analysis
+Tactics: [Credential Access, Collection, Command and Control, Exfiltration]
+Tools: []
+---
+
 # FakeGPT
 
 ## Scenario
@@ -74,3 +90,7 @@ We saw this domain earlier when inspecting the method of exfil: `Mo[.]Elshaheedy
 ### 10. What does the extension access to store or manipulate session-related data and authentication information?
 
 In the `manifest.json`, we can read the list of permissions 'required' by the extension. The one relating to this question is `cookies`
+
+## References
+
+- [CTF Link](https://cyberdefenders.org/blueteam-ctf-challenges/fakegpt/)

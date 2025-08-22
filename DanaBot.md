@@ -1,3 +1,20 @@
+---
+Type: CTF
+tags:
+ - Type/Atom
+ - status/done
+ - ctf/platform/CyberDefenders
+ - ctf/difficulty/Easy
+ - ctf/category/Network_Forensics
+created: 2025-08-18T15:52
+Status: Done
+Platform: CyberDefenders
+Category: Network Forensics
+Tactics: [Execution, Command and Control]
+Tools: [TShark]
+---
+
+
 # DanaBot
 
 ## Scenario
@@ -54,3 +71,7 @@ We can see the malware pull `http[:]//soundata[.]top/resources.dll`, so the exte
 ### 6. What is the MD5 hash of the second malicious file?
 
 We already grabbed this from the PCAP earlier in question 3. We can run `md5sum resources.dll` to get the hash: `e758e07113016aca55d9eda2b0ffeebe`
+
+## References
+
+- [CTF Link](https://cyberdefenders.org/blueteam-ctf-challenges/danabot/)
