@@ -17,14 +17,6 @@ Tools: [TShark]
 
 # XLMRat
 
-## Overview
-
-{{VALUE:CTF Scenario}}
-
-## Questions / Walkthrough
-
-# XLMRat
-
 ## Scenario
 
 A compromised machine has been flagged due to suspicious network traffic. Your task is to analyze the PCAP file to determine the attack method, identify any malicious payloads, and trace the timeline of events. Focus on how the attacker gained access, what tools or techniques were used, and how the malware operated post-compromise.
