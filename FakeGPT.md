@@ -3,9 +3,10 @@ Type: CTF
 tags:
  - Type/Atom
  - status/done
- - ctf/platform/CyberDefenders
- - ctf/difficulty/Easy
- - ctf/category/Malware_Analysis
+ - difficulty/Easy
+ - ctf/writeup
+ - platform/CyberDefenders
+ - Malware_Analysis
 created: 2025-08-22T21:40
 Status: Done
 Platform: CyberDefenders

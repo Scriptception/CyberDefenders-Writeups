@@ -3,9 +3,10 @@ Type: CTF
 tags:
  - Type/Atom
  - status/planned
- - ctf/platform/CyberDefenders
- - ctf/difficulty/Easy
- - ctf/category/Network_Forensics
+ - difficulty/Easy
+ - ctf/writeup
+ - platform/CyberDefenders
+ - Network_Forensics
 created: 2025-08-22T21:33
 Status: Planned
 Platform: CyberDefenders

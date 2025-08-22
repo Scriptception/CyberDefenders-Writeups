@@ -3,9 +3,10 @@ Type: CTF
 tags:
   - Type/Atom
   - status/done
-  - ctf/platform/CyberDefenders
-  - ctf/difficulty/Easy
-  - ctf/category/Threat_Intel
+  - difficulty/Easy
+  - ctf/writeup
+  - platform/CyberDefenders
+  - Threat_Intel
 created: 2025-08-22T22:11
 Status: Done
 Platform: CyberDefenders
